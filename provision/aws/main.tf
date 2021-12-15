@@ -32,12 +32,6 @@ resource "aws_instance" "demo_servers" {
   subnet_id               = module.base.subnet 
   key_name                = module.base.ssh_key_name
   tags                    = var.tags
-
-  lifecycle {
-    ignore_changes = [
-      tags,
-    ]
-  }
 }
 
 output "demo_servers" {
