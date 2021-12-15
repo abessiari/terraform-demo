@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  demo:
+    hostname: demo 
+    container_name: demo 
+    image: {{ IMAGE }}
+    init: true
+    ports:
+      - "80:80"
+    restart: unless-stopped

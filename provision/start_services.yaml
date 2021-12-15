@@ -1,0 +1,6 @@
+- hosts: all
+
+  tasks:
+  - name: Create and start services
+    docker_compose:
+      project_src: .

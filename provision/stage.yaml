@@ -1,0 +1,9 @@
+- hosts: all
+  vars:
+    IMAGE: nginx:latest 
+
+  tasks:
+  - name: copy docker-compose 
+    template:
+      src: "templates/docker-compose.yaml"
+      dest: "docker-compose.yaml"

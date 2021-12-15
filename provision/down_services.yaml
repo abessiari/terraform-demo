@@ -1,0 +1,8 @@
+- hosts: all
+
+  tasks:
+
+  - name: Tear down existing services
+    docker_compose:
+      project_src: .
+      state: absent
