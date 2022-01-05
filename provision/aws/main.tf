@@ -26,7 +26,7 @@ module "base" {
 
 resource "aws_instance" "demo_servers" {
   count                   = var.instance_count 
-  ami                     = "ami-02e07e1a02fcf6cf3"
+  ami                     = "ami-01e51d86b60c02297"
   instance_type           = "t2.micro"
   vpc_security_group_ids  = [ module.base.security_group ]
   subnet_id               = module.base.subnet 
